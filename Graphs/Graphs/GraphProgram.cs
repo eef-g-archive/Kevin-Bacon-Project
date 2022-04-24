@@ -58,7 +58,9 @@ namespace Program
                 FileInput();
             }
 
-            Console.WriteLine($"File '{sourceFile}' is valid. Creating graph, please wait. . .");            
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"File '{sourceFile}' is valid. Creating graph, please wait. . .");
+            Console.ForegroundColor = ConsoleColor.Gray;
             // Create the MathGraph object for the graph
             MathGraph<string> movieGraph = new MathGraph<string>();
             Stopwatch sw = new Stopwatch();
@@ -99,7 +101,7 @@ namespace Program
             sw.Reset();
 
             // Print out the times it took to begin the program
-            Console.WriteLine($"\n\nRead the file '{sourceFile.Substring(2)}' in {fileTime} ms");
+            Console.WriteLine($"\n\nRead the file '{sourceFile}' in {fileTime} ms");
             Console.WriteLine($"Successfully made a graph from the data in {graphTime} ms\n");
 
             
@@ -112,8 +114,8 @@ namespace Program
             string[] celebs = new string[2];
 
             ///<summary>
-            /// Prints out the 
-            /// </summary>
+            /// Prints out how two celebrities are linked via a common movie, but in special coloring (that mimics what was on the example output)
+            ///</summary>
             void ShinyText(string actor1, string movie, string actor2)
             {
                 Console.ForegroundColor = ConsoleColor.Cyan;
@@ -129,7 +131,10 @@ namespace Program
                 Console.ForegroundColor= ConsoleColor.Gray;
             }
 
-            // Function for searching
+            ///<summary>
+            /// First checks if 2 celebrities are actually linked or not. If they are, then it will search through the whole graph
+            /// and print out the stats of that connection via the shortest path. 
+            ///</summary>
             void SearchGraph()
             {
                 if(!movieGraph.TestConnectedTo(celebs[0], celebs[1]))
@@ -139,20 +144,23 @@ namespace Program
                 }
                 else
                 {
+                    Stopwatch s = new Stopwatch();
+                    s.Start();
                     List<string> separations = movieGraph.FindShortestPath(celebs[0], celebs[1]);
                     int sep = 0;
                     foreach(string separation in separations)
                     {
                         if (separation.Contains('(')) sep++;
                     }
+                    s.Stop();
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine($"{sep} degrees of separation between '{celebs[0]}' and '{celebs[1]}':");
                     for(int i = 0; i < sep * 2; i += 2)
                     {
                         ShinyText(separations[i], separations[i + 1], separations[i + 2]);
                     }
-                    Console.WriteLine("\n\n");
                     Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.WriteLine($"Searched over {movieGraph.CountVertices()} verticies and {movieGraph.CountEdges()} edges. Took {s.ElapsedMilliseconds} ms\n\n");
                 }
 
             }
