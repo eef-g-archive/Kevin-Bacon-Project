@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Ethan\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\etan3\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ethan\\source\\repos\\Graphs\\GraphLibrary\\GraphLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\etan3\\OneDrive\\Documents\\Kevin-Bacon-Project\\Graphs\\GraphLibrary\\GraphLibrary.csproj",
       "projectName": "GraphLibrary",
-      "projectPath": "C:\\Users\\Ethan\\source\\repos\\Graphs\\GraphLibrary\\GraphLibrary.csproj",
-      "packagesPath": "C:\\Users\\Ethan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ethan\\source\\repos\\Graphs\\GraphLibrary\\obj\\",
+      "projectPath": "C:\\Users\\etan3\\OneDrive\\Documents\\Kevin-Bacon-Project\\Graphs\\GraphLibrary\\GraphLibrary.csproj",
+      "packagesPath": "C:\\Users\\etan3\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\etan3\\OneDrive\\Documents\\Kevin-Bacon-Project\\Graphs\\GraphLibrary\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Ethan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\etan3\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

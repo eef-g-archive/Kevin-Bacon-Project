@@ -2,7 +2,7 @@
   "profiles": {
     "Graphs": {
       "commandName": "Project",
-      "commandLineArgs": ".\\imdb.top250.txt"
+      "commandLineArgs": ".\\imdb.top250.tt \"Kevin Bacon\" \"Harrison Ford\""
     }
   }
 }

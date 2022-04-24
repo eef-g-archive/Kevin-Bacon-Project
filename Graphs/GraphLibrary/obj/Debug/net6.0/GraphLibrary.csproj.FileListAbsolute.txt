@@ -10,3 +10,15 @@ C:\Users\Ethan\source\repos\Graphs\GraphLibrary\obj\Debug\net6.0\GraphLibrary.dl
 C:\Users\Ethan\source\repos\Graphs\GraphLibrary\obj\Debug\net6.0\refint\GraphLibrary.dll
 C:\Users\Ethan\source\repos\Graphs\GraphLibrary\obj\Debug\net6.0\GraphLibrary.pdb
 C:\Users\Ethan\source\repos\Graphs\GraphLibrary\obj\Debug\net6.0\ref\GraphLibrary.dll
+C:\Users\etan3\OneDrive\Documents\Kevin-Bacon-Project\Graphs\GraphLibrary\bin\Debug\net6.0\GraphLibrary.deps.json
+C:\Users\etan3\OneDrive\Documents\Kevin-Bacon-Project\Graphs\GraphLibrary\bin\Debug\net6.0\GraphLibrary.dll
+C:\Users\etan3\OneDrive\Documents\Kevin-Bacon-Project\Graphs\GraphLibrary\bin\Debug\net6.0\GraphLibrary.pdb
+C:\Users\etan3\OneDrive\Documents\Kevin-Bacon-Project\Graphs\GraphLibrary\obj\Debug\net6.0\GraphLibrary.csproj.AssemblyReference.cache
+C:\Users\etan3\OneDrive\Documents\Kevin-Bacon-Project\Graphs\GraphLibrary\obj\Debug\net6.0\GraphLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\etan3\OneDrive\Documents\Kevin-Bacon-Project\Graphs\GraphLibrary\obj\Debug\net6.0\GraphLibrary.AssemblyInfoInputs.cache
+C:\Users\etan3\OneDrive\Documents\Kevin-Bacon-Project\Graphs\GraphLibrary\obj\Debug\net6.0\GraphLibrary.AssemblyInfo.cs
+C:\Users\etan3\OneDrive\Documents\Kevin-Bacon-Project\Graphs\GraphLibrary\obj\Debug\net6.0\GraphLibrary.csproj.CoreCompileInputs.cache
+C:\Users\etan3\OneDrive\Documents\Kevin-Bacon-Project\Graphs\GraphLibrary\obj\Debug\net6.0\GraphLibrary.dll
+C:\Users\etan3\OneDrive\Documents\Kevin-Bacon-Project\Graphs\GraphLibrary\obj\Debug\net6.0\refint\GraphLibrary.dll
+C:\Users\etan3\OneDrive\Documents\Kevin-Bacon-Project\Graphs\GraphLibrary\obj\Debug\net6.0\GraphLibrary.pdb
+C:\Users\etan3\OneDrive\Documents\Kevin-Bacon-Project\Graphs\GraphLibrary\obj\Debug\net6.0\ref\GraphLibrary.dll

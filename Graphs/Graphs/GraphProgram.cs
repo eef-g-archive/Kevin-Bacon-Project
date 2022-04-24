@@ -8,34 +8,60 @@ namespace Program
     {
         public static void Main(string[] args)
         {
-            if (args.Length == 0)
+
+            /////////////////////
+            //      SETUP      //
+            /////////////////////
+   
+            Console.ForegroundColor = ConsoleColor.Gray; // Do this so that way the degrees output is more noticeable.
+            string sourceFile = ""; //Need to put this here first since otherwise it's not accessible later on in the program.
+            
+            ///<summary>
+            /// Has the user type in a filename to use for the program. Keeps asking the user to input a file until it is a valid one.
+            ///</summary>
+            void FileInput()
             {
-                Console.WriteLine("[-] Error: No arguments were given. There must be at least ONE argument (a filename). Exiting program. . .");
-                return;
+                Console.WriteLine("Please enter a filepath for the IMDb databse you want to use");
+                Console.Write("> ");
+                sourceFile = Console.ReadLine();
+                while (!File.Exists(sourceFile))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"[-] Error: File '{sourceFile}' does not exist!");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.WriteLine("Please enter a filename for the IMDb databse you want to use");
+                    Console.Write("> ");
+                    sourceFile = Console.ReadLine();
+                }
+                Console.Clear();
             }
-            if (File.Exists(args[0]))
+
+            // Command Line Arg Handling (Will automatically use first arg if given, or will ask user for filename if not given!)
+            if (args.Length > 0)
             {
-                Console.WriteLine($"DEBUG: Filepath '{args[0]}' exists!");
+                sourceFile = args[0];
+                if (!File.Exists(args[0]))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"[-] Error: File '{args[0]}' does not exist!\n\n");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+
+                    while(!File.Exists(sourceFile))
+                    {
+                        FileInput();
+                    }
+                }
             }
             else
             {
-                Console.WriteLine($"[-] Error: File '{args[0]}' does not exist!");
-                return;
-            }
-            if (args.Length >= 3)
-            {
-                // args[1] and args[2] are going to be the initial celebrity names, I believe.
-                Console.WriteLine("[+] DEBUG: Two optional args detected! Printing inputs. . .");
-                Console.WriteLine(args[1]);
-                Console.WriteLine(args[2]);
+                sourceFile = "";
+                FileInput();
             }
 
-
+            Console.WriteLine($"File '{sourceFile}' is valid. Creating graph, please wait. . .");            
             // Create the MathGraph object for the graph
             MathGraph<string> movieGraph = new MathGraph<string>();
             Stopwatch sw = new Stopwatch();
-
-            string sourceFile = args[0];
             
             // Use Stopwatch when reading file to see how long it takes (and assign a variable to call this later)
             sw.Start();
@@ -69,38 +95,119 @@ namespace Program
                 movieGraph.AddEdge(name, parts[1]);
             }
             sw.Stop();
-            long graphTime = sw.ElapsedMilliseconds;
+            long graphTime = sw.ElapsedMilliseconds; // Save in a long var how long it takes in ms to create the graph
             sw.Reset();
 
             // Print out the times it took to begin the program
-            Console.WriteLine($"[+] DEBUG INFO\nRead the file '{sourceFile.Substring(2)}' in {fileTime} ms");
+            Console.WriteLine($"\n\nRead the file '{sourceFile.Substring(2)}' in {fileTime} ms");
             Console.WriteLine($"Successfully made a graph from the data in {graphTime} ms\n");
 
+            
 
-            // This function will 
-            public void CalcDegree()
+            ////////////////////////
+            //       ACTUAL       //
+            //      PROGRAM       //
+            ////////////////////////
+            
+            string[] celebs = new string[2];
+
+            ///<summary>
+            /// Prints out the 
+            /// </summary>
+            void ShinyText(string actor1, string movie, string actor2)
             {
-                Console.WriteLine("Running the CalcDegree() function!");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write(actor1);
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write(" was in ");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write(movie);
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write(" with ");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write($"{actor2}\n");
+                Console.ForegroundColor= ConsoleColor.Gray;
+            }
+
+            // Function for searching
+            void SearchGraph()
+            {
+                if(!movieGraph.TestConnectedTo(celebs[0], celebs[1]))
+                {
+                    Console.WriteLine($"It looks like '{celebs[0]}' & '{celebs[1]}' aren't connected at all!\n\n");
+                    return;
+                }
+                else
+                {
+                    List<string> separations = movieGraph.FindShortestPath(celebs[0], celebs[1]);
+                    int sep = 0;
+                    foreach(string separation in separations)
+                    {
+                        if (separation.Contains('(')) sep++;
+                    }
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine($"{sep} degrees of separation between '{celebs[0]}' and '{celebs[1]}':");
+                    for(int i = 0; i < sep * 2; i += 2)
+                    {
+                        ShinyText(separations[i], separations[i + 1], separations[i + 2]);
+                    }
+                    Console.WriteLine("\n\n");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                }
+
             }
 
 
-
-            string[] celebs = new string[2];
+            // Run the program once if two celebrities were given as command line args BEFORE entering the loop
             if(args.Length == 3)
             {
                 celebs[0] = args[1];
                 celebs[1] = args[2];
+                Console.WriteLine($"Searching for the Degrees of separation between '{celebs[0]}' and '{celebs[1]}'");
+                SearchGraph();
             }
             while(true)
             {
 
-                // Prompt for user input to begin the program
-                Console.WriteLine("Enter two celebrities names (following the format below)\nExample Input: Kevin Bacon and Chris Pratt");
+                // ***** Start Loop *****
+                Console.WriteLine("Enter two celebrities names, or 'quit' to end the program! (following the format below)\nExample Input: Kevin Bacon and Chris Pratt");
                 Console.Write("> ");
                 string inp = Console.ReadLine();
-                string[] celebs = inp.Split(" and ");
+
+
+                // ****** Input Handling *****
+                
+                // See if user is trying to quit program
+                if ((inp.ToLower().Equals("quit")) || (inp.ToLower().Equals("q")))
+                {
+                    Console.WriteLine("Quiting Program . . .");
+                    break;
+                }
+
+                // See if user is following the input format
+                if(!inp.Contains(" and "))
+                {
+                    Console.WriteLine("Oops! Looks like your input didn't follow the format!\n\n");
+                    continue;
+                }
+                
+                // See if the celebrities that the user input are in the text file
+                celebs = inp.Split(" and ");
+                if(!movieGraph.ContainsVertex(celebs[0]))
+                {
+                    Console.WriteLine($"Oops! Looks like '{celebs[0]}' isn't in this database.\n\n");
+                    continue;
+                }
+                else if(!movieGraph.ContainsVertex(celebs[1]))
+                {
+                    Console.WriteLine($"Oops! Looks like '{celebs[1]}' isn't in this database.\n\n");
+                    continue;
+                }
+
                 Console.WriteLine($"Searching for the Degrees of separation between '{celebs[0]}' and '{celebs[1]}'");
 
+                // ***** Actually Searching *****
+                SearchGraph();
             }
         }
     }
