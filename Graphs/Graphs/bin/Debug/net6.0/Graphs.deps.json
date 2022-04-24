@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Graphs/1.0.0": {
+        "dependencies": {
+          "GraphLibrary": "1.0.0"
+        },
+        "runtime": {
+          "Graphs.dll": {}
+        }
+      },
+      "GraphLibrary/1.0.0": {
+        "runtime": {
+          "GraphLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Graphs/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GraphLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

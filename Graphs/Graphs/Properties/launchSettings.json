@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Graphs": {
+      "commandName": "Project",
+      "commandLineArgs": ".\\imdb.top250.txt"
+    }
+  }
+}

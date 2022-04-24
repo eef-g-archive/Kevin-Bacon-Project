@@ -1,0 +1,12 @@
+C:\Users\Ethan\source\repos\Graphs\GraphLibrary\bin\Debug\net6.0\GraphLibrary.deps.json
+C:\Users\Ethan\source\repos\Graphs\GraphLibrary\bin\Debug\net6.0\GraphLibrary.dll
+C:\Users\Ethan\source\repos\Graphs\GraphLibrary\bin\Debug\net6.0\GraphLibrary.pdb
+C:\Users\Ethan\source\repos\Graphs\GraphLibrary\obj\Debug\net6.0\GraphLibrary.csproj.AssemblyReference.cache
+C:\Users\Ethan\source\repos\Graphs\GraphLibrary\obj\Debug\net6.0\GraphLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ethan\source\repos\Graphs\GraphLibrary\obj\Debug\net6.0\GraphLibrary.AssemblyInfoInputs.cache
+C:\Users\Ethan\source\repos\Graphs\GraphLibrary\obj\Debug\net6.0\GraphLibrary.AssemblyInfo.cs
+C:\Users\Ethan\source\repos\Graphs\GraphLibrary\obj\Debug\net6.0\GraphLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Ethan\source\repos\Graphs\GraphLibrary\obj\Debug\net6.0\GraphLibrary.dll
+C:\Users\Ethan\source\repos\Graphs\GraphLibrary\obj\Debug\net6.0\refint\GraphLibrary.dll
+C:\Users\Ethan\source\repos\Graphs\GraphLibrary\obj\Debug\net6.0\GraphLibrary.pdb
+C:\Users\Ethan\source\repos\Graphs\GraphLibrary\obj\Debug\net6.0\ref\GraphLibrary.dll
