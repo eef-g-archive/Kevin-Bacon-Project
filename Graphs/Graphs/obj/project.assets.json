@@ -27,34 +27,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\etan3\\.nuget\\packages\\": {}
+    "/home/ethan/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\etan3\\OneDrive\\Documents\\Kevin-Bacon-Project\\Graphs\\Graphs\\Graphs.csproj",
+      "projectUniqueName": "/home/ethan/Documents/GitHub/Kevin-Bacon-Project/Graphs/Graphs/Graphs.csproj",
       "projectName": "Graphs",
-      "projectPath": "C:\\Users\\etan3\\OneDrive\\Documents\\Kevin-Bacon-Project\\Graphs\\Graphs\\Graphs.csproj",
-      "packagesPath": "C:\\Users\\etan3\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\etan3\\OneDrive\\Documents\\Kevin-Bacon-Project\\Graphs\\Graphs\\obj\\",
+      "projectPath": "/home/ethan/Documents/GitHub/Kevin-Bacon-Project/Graphs/Graphs/Graphs.csproj",
+      "packagesPath": "/home/ethan/.nuget/packages/",
+      "outputPath": "/home/ethan/Documents/GitHub/Kevin-Bacon-Project/Graphs/Graphs/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\etan3\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/ethan/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\etan3\\OneDrive\\Documents\\Kevin-Bacon-Project\\Graphs\\GraphLibrary\\GraphLibrary.csproj": {
-              "projectPath": "C:\\Users\\etan3\\OneDrive\\Documents\\Kevin-Bacon-Project\\Graphs\\GraphLibrary\\GraphLibrary.csproj"
+            "/home/ethan/Documents/GitHub/Kevin-Bacon-Project/Graphs/GraphLibrary/GraphLibrary.csproj": {
+              "projectPath": "/home/ethan/Documents/GitHub/Kevin-Bacon-Project/Graphs/GraphLibrary/GraphLibrary.csproj"
             }
           }
         }
@@ -83,7 +81,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
       }
     }
   }

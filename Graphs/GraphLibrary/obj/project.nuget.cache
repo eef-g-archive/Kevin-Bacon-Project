@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B0oy5Z7XmfF+9PTPfDyj7pxi4I9xwOovEqgXBf6UP6JJkmBFY8OakuVtFFMqwCRFD0C+17zQoDb4eBLjW4RK9w==",
+  "dgSpecHash": "Fj/6N4eoKoZmvqVIdQuxX8+Zt+jINRMrkIhVPBZTlqgx/k2RC79VsdDEhlGfB+vZarwDjgCAatKEKihRIcCUPw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\etan3\\OneDrive\\Documents\\Kevin-Bacon-Project\\Graphs\\GraphLibrary\\GraphLibrary.csproj",
+  "projectFilePath": "/home/ethan/Documents/GitHub/Kevin-Bacon-Project/Graphs/GraphLibrary/GraphLibrary.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
